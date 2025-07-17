@@ -60,11 +60,13 @@ fun FirstScreen(
                     .background(Color.White.copy(alpha = 0.3f)),
                 contentAlignment = Alignment.Center
             ) {
-                Icon(
-                    painter = painterResource(android.R.drawable.ic_menu_camera),
+                Image(
+                    painter = painterResource(id = R.drawable.ic_photo),
                     contentDescription = "Profile",
-                    modifier = Modifier.size(40.dp),
-                    tint = Color.White
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .clip(CircleShape),
+                    contentScale = ContentScale.Crop
                 )
             }
 
